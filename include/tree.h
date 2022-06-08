@@ -61,7 +61,7 @@ class Ptree {
                 root->list = create(node, root);
         }
 
-        std::vector<char> get(int i) {
+        std::vector<char> getPerm(int n) {
                 main = i;
                 getElements(root, "");
                 std::vector<char> result = various;
