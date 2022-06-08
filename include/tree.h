@@ -44,13 +44,13 @@ class Ptree {
                 for (int i = 0; i < cur->list.size(); i++)
                          getElements(&cur->list[i], target);
                 if ((target.length() == root->list.size())
-		    && current == main - 1 && various.empty()) {
+                     && current == main - 1 && various.empty()) {
                        for (int i = 0; i < target.length(); i++)
-			       various.push_back(target[i]);
+                               various.push_back(target[i]);
                 } else {
                        if (target.length() == root->list.size())
                          current++;
-		}
+                }
                 return target;
           }
 
