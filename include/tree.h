@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-class Ptree {
+class Tree {
  private:
         struct Pnode {
                 char val;
@@ -55,7 +55,7 @@ class Ptree {
           }
 
  public:
-        explicit Tree(std::vector<char> node) {
+        void Tree(std::vector<char> node) {
                 root = new Pnode;
                 root->val = '*';
                 root->list = create(node, root);
