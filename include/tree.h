@@ -54,11 +54,12 @@ private:
 }
 
 public:
-	int Tree(std::vector<char> node) {
+	void Tree(std::vector<char> node) {
 		root = new Pnode;
 		root->val = '*';
 		root->list = create(node, root);
 	}
+	
 	std::vector<char> get(int i) {
 		main = i;
 		getElements(root, "");
