@@ -55,7 +55,7 @@ class Ptree {
           }
 
  public:
-        void Tree(std::vector<char> node) {
+        explicit Tree(std::vector<char> node) {
                 root = new Pnode;
                 root->val = '*';
                 root->list = create(node, root);
