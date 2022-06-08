@@ -62,7 +62,7 @@ class Ptree {
         }
 
         std::vector<char> getPerm(int n) {
-                main = i;
+                main = n;
                 getElements(root, "");
                 std::vector<char> result = various;
                 various.clear();
