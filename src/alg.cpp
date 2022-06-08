@@ -6,5 +6,5 @@
 #include  "tree.h"
 
 std::vector<char> getPerm(const Tree& tree, int n) {
-  return Tree(tree).get(n);
+  return Tree(tree).getPerm(n);
 }
