@@ -9,7 +9,7 @@
 
 class Ptree {
  private:
-	struct Pnode {
+        struct Pnode {
                 char val;
                 std::vector <Pnode> list;
         };
@@ -43,12 +43,14 @@ class Ptree {
                 if (cur->val != '*') target = target + cur->val;
                 for (int i = 0; i < cur->list.size(); i++)
                          getElements(&cur->list[i], target);
-                if (target.length() == root->list.size() && current == main - 1 && various.empty()) {
-                       for (int i = 0; i < target.length(); i++) various.push_back(target[i]);
-                }
-                else if (target.length() == root->list.size()) {
+                if ((target.length() == root->list.size())
+		    && current == main - 1 && various.empty()) {
+                       for (int i = 0; i < target.length(); i++)
+			       various.push_back(target[i]);
+                } else {
+                       if (target.length() == root->list.size())
                          current++;
-                }
+		}
                 return target;
           }
 
@@ -65,8 +67,8 @@ class Ptree {
                 std::vector<char> result = various;
                 various.clear();
                 current = 0;
-		return result;
-	}
+                return result;
+        }
 };
 
 #endif  // INCLUDE_TREE_H_
